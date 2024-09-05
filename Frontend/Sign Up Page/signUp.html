@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0c345c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4ba2ff;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #cce5ff;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5aaaff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    text-align: left;
+    padding: 12px 2px;
+}
+
+.dropdown-content li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+        .signup-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group .phone-fields {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group .phone-fields input[type="text"] {
+            width: 5%; /* Reduced width of +91 box */
+            padding: 8px; /* Added padding for +91 box */
+            margin-right: 8px; /* Added spacing between +91 and phone number */
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group .phone-fields input[type="tel"] {
+            width: 95%; /* Adjusted width to take more space */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group .optional {
+            font-style: italic;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .name-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .name-group div {
+            width: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form>
+            <div class="form-group name-group">
+                <div>
+                    <label for="first-name">First Name <span class="mandatory">*</span></label>
+                    <input type="text" id="first-name" name="first-name" required pattern="[A-Za-z]+" title="Only alphabets are allowed">
+                </div>
+                <div>
+                    <label for="middle-name">Middle Name <span class="optional"></span></label>
+                    <input type="text" id="middle-name" name="middle-name" pattern="[A-Za-z]+" title="Only alphabets are allowed">
+                </div>
+                <div>
+                    <label for="last-name">Last Name <span class="mandatory">*</span></label>
+                    <input type="text" id="last-name" name="last-name" required pattern="[A-Za-z]+" title="Only alphabets are allowed">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="username">Username <span class="mandatory">*</span></label>
+                <input type="text" id="username" name="username" required pattern="[A-Za-z0-9_]{1,10}" title="Username can contain letters, numbers, and underscores only, with a maximum length of 10 characters">
+            </div>
+            <div class="form-group">
+                <label for="contact-method">Contact Method</label>
+                <select id="contact-method" name="contact-method" onchange="toggleContactFields()">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                </select>
+            </div>
+            <div class="form-group" id="email-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group phone-fields" id="phone-group" style="display:none;">
+                <input type="text" id="country-code" name="country-code" value="+91" readonly>
+                <input type="tel" id="phone" name="phone" pattern="\d{10}" placeholder="10-digit Mobile Number" title="Please enter a 10-digit mobile number">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" title="Password must be at least 8 characters long and include a number, an uppercase letter, a lowercase letter, and a special character">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Sign Up">
+            </div>
+        </form>
+        <div class="footer">
+            Already have an account? <a href="../login-page/login.html">Sign In</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleContactFields() {
+            var contactMethod = document.getElementById("contact-method").value;
+            var emailGroup = document.getElementById("email-group");
+            var phoneGroup = document.getElementById("phone-group");
+
+            if (contactMethod === "email") {
+                emailGroup.style.display = "block";
+                phoneGroup.style.display = "none";
+            } else {
+                emailGroup.style.display = "none";
+                phoneGroup.style.display = "flex";
+            }
+        }
+    </script>
+</body>
+
+<header>
+    <div class="navbar">
+        <a href="../landing-page/landing.html" class="logo">Bail Reckoner</a>
+        <nav>
+            <ul>
+                <li><a href="../form-page/form.html">Bail Form</a></li>
+                <li class="dropdown">
+                    <a href="#">Dashboard</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Bail Dashboard</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Sign Up Page/signUp.html">Sign Up</a></li>
+                <li class="dropdown">
+                    <a href="#">Resources</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Video Resources</a></li>
+                        <li><a href="#">Documents</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+</html>
