@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bail Reckoner - Bail Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<header>
+    <div class="navbar">
+        <a href="../landing-page/landing.html" class="logo">Bail Reckoner</a>
+        <nav>
+            <ul>
+                <li><a href="../form-page/form.html">Bail Form</a></li>
+                <li class="dropdown">
+                    <a href="#">Dashboard</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Bail Dashboard</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Sign Up Page/signUp.html">Sign Up</a></li>
+                <li class="dropdown">
+                    <a href="#">Resources</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Video Resources</a></li>
+                        <li><a href="#">Documents</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    
+    <div class="form-container">
+        <h2>Bail Application Form</h2>
+        <form action="submit.html" method="post">
+            <!-- User Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <!-- Purpose (Prisoner/Legal Advisor) -->
+            <label for="purpose">Role:</label>
+            <select id="purpose" name="purpose" required>
+                <option value="">Select Your Role</option>
+                <option value="Prisoner">Prisoner</option>
+                <option value="Legal Advisor">Legal Advisor</option>
+            </select>
+
+            <!-- Nature of Offense -->
+            <label for="offense">Nature of Offense:</label>
+            <input type="text" id="offense" name="offense" placeholder="Enter the nature of the offense" required>
+
+            <!-- Charges Framed (IPC Sections) -->
+            <label for="charges">Charges Framed (IPC Sections):</label>
+            <input type="text" id="charges" name="charges" placeholder="Enter the charges (e.g., IPC Section 420)" required>
+
+            <!-- Duration of Imprisonment Already Served -->
+            <label for="imprisonment">Duration of Imprisonment Already Served (in months):</label>
+            <input type="number" id="imprisonment" name="imprisonment" placeholder="Enter duration in months" required>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
