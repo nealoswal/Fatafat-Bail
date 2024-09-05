@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url(../landing-page/bailer2.jpg);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4ba2ff;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #cce5ff;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5aaaff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    text-align: left;
+    padding: 12px 2px;
+}
+
+.dropdown-content li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: left; /* Aligning text to the left */
+    padding: 100px 20px;
+    margin-top: 60px; /* Adjust for fixed header */
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto; /* No auto margins to keep content aligned left */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 120%;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+.features {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.features p {
+    font-size: 120%;
+    color: #333;
+}
+
+.features h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #4ba2ff;
+}
+
+.feature-item {
+    margin-bottom: 40px;
+}
+
+.feature-item h3 {
+    font-size: 160%;
+    color: #333;
+}
+
+footer {
+    background-color: #4ba2ff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.aboutitem {
+    margin-bottom: 40px;
+}
